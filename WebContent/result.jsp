@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
-String[] words = (String[]) request.getAttribute("words");
+String word = (String) request.getAttribute("word");
 %>
 <!DOCTYPE html>
 <html lang="ja">
@@ -9,8 +9,6 @@ String[] words = (String[]) request.getAttribute("words");
         <title>Insert title here</title>
     </head>
     <body>
-        <% for(String word:words) { %>
             <p><%= word %></p>
-        <% } %>
     </body>
 </html>

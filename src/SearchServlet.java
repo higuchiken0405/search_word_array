@@ -22,7 +22,7 @@ public class SearchServlet extends HttpServlet {
 	    //パラメータから検索ワードを取得
 	    String search = request.getParameter("search");
 	    //
-	    String word = search.replaceAll("\\s+", ",").replace("　", ",").replaceAll(",$", "");
+	    String word = search.replaceAll("\\s", ",").replace("　", ",").replaceAll(",$", "");
 	    request.setAttribute("word", word);
 	    //result.jspに遷移
 	    RequestDispatcher rd = request.getRequestDispatcher("/result.jsp");
